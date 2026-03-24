@@ -59,7 +59,7 @@ public:
     // Must enforce the invariant.
     // Throw std::invalid_argument if value < -273.15
     void setCelsius(double celsius) {
-         if(celsius_<-273.15)
+         if(celsius<-273.15)
     {
       throw invalid_argument("Tempurature cannot be below absoulte zero.");
     }
