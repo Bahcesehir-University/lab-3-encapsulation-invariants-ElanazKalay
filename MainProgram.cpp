@@ -36,7 +36,7 @@ public:
     explicit Temperature(double celsius) {
         if(celsius<-273.15)
     {
-      throw std::invalid_argument("Tempurature cannot be below absoulte zero.");
+      throw invalid_argument("Tempurature cannot be below absoulte zero.");
     }
     celsius_=celsius;
         // TODO: Validate and set celsius_
@@ -89,7 +89,7 @@ public:
             throw std::invalid_argument("Ownercannot be empty  ");
         }
         if(initialBalance<0){
-         throw std::invalid_argument("Balance cannot be negative");
+         throw invalid_argument("Balance cannot be negative");
         }
     owner_=owner;
     balance_=initialBalance;
@@ -114,7 +114,7 @@ public:
     // Throw std::invalid_argument if amount <= 0
     void deposit(double amount) {
         if(amount<=0){
-            throw std::invalid_argument("Deposite amount must be positive");
+            throw invalid_argument("Deposite amount must be positive");
         }
         balance_+=amount;
         
@@ -126,7 +126,7 @@ public:
     // Throw std::runtime_error if insufficient funds
     void withdraw(double amount) {
         if(amount<=0){
-            throw std::invalid_argument("Withdrawal amount must be positive");
+            throw invalid_argument("Withdrawal amount must be positive");
         }
         if(amount>balance_){
             throw runtime_error("Insufficient funds");
